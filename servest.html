@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: white; // Changed from #f0f0f0 to white
+            background-color: white; 
         }
         .main-section, .blue-banner {
             padding: 2rem;
@@ -18,14 +18,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .text-content {
             flex: 1;
             padding-right: 2rem;
+            min-width: 300px;
         }
         .logo {
             width: 100%;
-            max-width: 200px;
+            max-width: 350px; 
             height: auto;
             margin-bottom: 1rem;
         }
@@ -277,7 +279,7 @@
             color: white;
         }
 
-        // Modify and add these styles
+        
         .content-wrapper {
             max-width: 1200px;
             margin: 0 auto;
@@ -300,6 +302,32 @@
             width: 100%;
             max-width: 1200px;
         }
+
+        
+        @media (max-width: 1200px) {
+            .logo {
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .text-content {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+            .logo {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                max-width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -310,7 +338,7 @@
                     <div class="main-content">
                         <div class="text-content">
                             <img src="images/first logo.png" alt="Servest Secure Logo" class="logo">
-                            <p class="description">A high availability emergency response service that delivers protection to you and your family while your crisis is resolved.</p>
+                            <p style="font-size:22px;" description">A high availability emergency response service that delivers protection to you and your family while your crisis is resolved.</p>
                         </div>
                         <div class="image-container">
                             <img src="images/phone logo.png" alt="Smartphone with map" class="main-image">
