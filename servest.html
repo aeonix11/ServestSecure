@@ -101,6 +101,7 @@
         .image-item {
             width: 22%;
             text-align: center;
+            margin-bottom: 1rem;
         }
         .image-item img {
             width: 100%;
@@ -110,8 +111,20 @@
         .image-title {
             background-color: white;
             color: #003399;
-            padding: 0.5rem;
             font-weight: bold;
+            font-size: 0.9rem;
+            height: 3em;
+            position: relative;
+            overflow: hidden;
+        }
+        .image-title span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 0.5rem;
+            box-sizing: border-box;
         }
         .grey-banner {
             background-color: #808080;
@@ -224,6 +237,18 @@
             }
             .phone-container, .content-container {
                 width: 100%;
+            }
+            .image-item {
+                width: 48%; 
+            }
+            .image-title {
+                font-size: 0.8rem; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-item {
+                width: 100%; 
             }
         }
 
@@ -355,19 +380,27 @@
                 <div class="image-grid">
                     <div class="image-item">
                         <img src="images/national footprint.png" alt="National Footprint">
-                        <div class="image-title">NATIONAL FOOTPRINT</div>
+                        <div class="image-title">
+                            <span>NATIONAL FOOTPRINT</span>
+                        </div>
                     </div>
                     <div class="image-item">
                         <img src="images/national control centers.png" alt="National Control & Command Centres">
-                        <div class="image-title">NATIONAL CONTROL & COMMAND CENTRES</div>
+                        <div class="image-title">
+                            <span>NATIONAL CONTROL & COMMAND CENTRES</span>
+                        </div>
                     </div>
                     <div class="image-item">
                         <img src="images/armed response.png" alt="24/7 Armed Response">
-                        <div class="image-title">24/7 ARMED RESPONSE</div>
+                        <div class="image-title">
+                            <span>24/7 ARMED RESPONSE</span>
+                        </div>
                     </div>
                     <div class="image-item">
                         <img src="images/aerial emergency.png" alt="Aerial Emergency Services">
-                        <div class="image-title">AERIAL EMERGENCY SERVICES</div>
+                        <div class="image-title">
+                            <span>AERIAL EMERGENCY SERVICES</span>
+                        </div>
                     </div>
                 </div>
             </div>
