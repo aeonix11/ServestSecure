@@ -32,21 +32,21 @@
             margin-bottom: 1rem;
         }
         h1 {
-            color: #003399;
+            color: #143c90;
             margin: 0;
         }
         h2 {
-            color: #666;
+            color: #848884; 
             font-weight: normal;
             margin: 0.5rem 0 1rem;
         }
         .tagline {
-            color: #003399;
+            color: #143c90;
             font-weight: bold;
             margin-bottom: 1rem;
         }
         .description {
-            color: #333;
+            color: #848884; 
         }
         .image-container {
             position: relative;
@@ -67,11 +67,11 @@
             height: 80%;
             bottom: -20px;
             right: -20px;
-            background-color: #003399;
+            background-color: #143c90;
             z-index: 1;
         }
         .blue-banner {
-            background-color: #003399;
+            background-color: #143c90;
             color: white;
             padding: 2rem;
         }
@@ -91,7 +91,7 @@
             transform: translateX(-50%);
             width: 80%;
             height: 1px;
-            background-color: #cccccc;
+            background-color: #848884; 
         }
         .image-grid {
             display: flex;
@@ -110,7 +110,7 @@
         }
         .image-title {
             background-color: white;
-            color: #003399;
+            color: #143c90;
             font-weight: bold;
             font-size: 0.9rem;
             height: 3em;
@@ -127,7 +127,7 @@
             box-sizing: border-box;
         }
         .grey-banner {
-            background-color: #808080;
+            background-color: #848884; 
             color: white;
             padding: 1.5rem;
             position: relative;
@@ -143,19 +143,21 @@
         .services-section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 0;
+            padding: 0; /* Remove padding */
         }
         .services-image {
             width: 100%;
             height: auto;
             display: block;
+            margin: -1px 0; /* Add negative margin to overlap borders */
         }
         .grey-info-banner {
-            background-color: #808080;
+            background-color: #848884; 
             color: white;
             padding: 2rem;
             position: relative;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 1.1rem;
         }
         .info-container {
             display: flex;
@@ -177,14 +179,14 @@
             margin: 0 auto;
         }
         .app-usage-title, .about-us-title {
-            color: #003399;
+            color: #143c90;
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
         .app-usage-separator, .about-us-separator {
             height: 6px;
-            background-color: #cccccc;
+            background-color: #848884; 
             border: none;
             margin: 0;
         }
@@ -209,22 +211,42 @@
             min-width: 300px;
         }
         .content-title {
-            color: #003399;
+            color: #143c90;
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
         .content-text {
             margin-bottom: 1rem;
+            font-size: 1rem; /* Base font size */
         }
         .content-logo {
-            max-width: 200px;
+            width: 100%; /* Make the image full width of its container */
+            max-width: 100%; /* Ensure it doesn't exceed the container width */
+            height: auto; /* Maintain aspect ratio */
             margin-top: 2rem;
         }
         .content-tagline {
-            color: #003399;
+            color: #143c90;
             font-weight: bold;
             margin-top: 0.5rem;
+            font-size: 1rem; /* Base font size */
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 1024px) {
+            .content-title {
+                font-size: 2rem;
+            }
+            .content-text {
+                font-size: 1.2rem;
+            }
+            .content-tagline {
+                font-size: 1.2rem;
+            }
+            .content-logo {
+                max-width: 400px; /* Set a maximum width for very large screens */
+            }
         }
 
         @media (max-width: 768px) {
@@ -267,7 +289,7 @@
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            background-color: #003399; /* Dark blue background */
+            background-color: #143c90;
             color: white;
         }
 
@@ -280,7 +302,7 @@
 
         .specialised-services-separator {
             height: 6px;
-            background-color: #cccccc;
+            background-color: #848884; 
             border: none;
             margin: 0 0 1.5rem 0;
         }
@@ -406,18 +428,29 @@
             </div>
         </section>
 
-        <div class="centered-content">
-            <section class="services-section">
-                <div class="content-wrapper">
-                    <img src="images/services.png" alt="Servest Secure Services" class="services-image">
-                </div>
-            </section>
-        </div>
-
         <section class="grey-banner full-width">
             <div class="content-wrapper">
                 <div class="grey-banner-content">
                     As a Servest Secure Subscriber, you and up to five of your loved ones enjoy the protection of professional personal security when you find yourself vulnerable or feel threatened under any of the following conditions:
+                </div>
+            </div>
+        </section>
+
+        <div class="centered-content">
+            <section class="services-section">
+                <img src="images/services.png" alt="Servest Secure Services" class="services-image">
+            </section>
+        </div>
+
+        <section class="grey-info-banner full-width">
+            <div class="content-wrapper">
+                <div class="info-container">
+                    <div class="info-item">
+                        <p>By pressing the Servest Secure button on your phone, you are activating a team of security professionals with one thing in mind...to keep you safe and protected! We are instantly aware of your situation and location which are key to solving your crisis effectively and quickly.</p>
+                    </div>
+                    <div class="info-item">
+                        <p>At Servest Secure, our sole purpose is to minimize the risk of injury or loss to our members. We do this by providing immediate management of any situation while dispatch of security, mechanical or medical teams are underway.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -438,25 +471,14 @@
                             <p class="content-text">Making the right people aware of your situation significantly minimises immediate and consequential risk that leaves you vulnerable and powerless.</p>
                             <p class="content-text">The location technology on the Servest Secure app provides us with your battery life and updated locations until we close the service call, meaning that if your situation deteriorates and you are unable to make further calls we will still be able to keep track of your location.</p>
                             <img src="images/servest secure phone logo.png" alt="Servest Secure Logo" class="content-logo">
-                            <p class="content-tagline">PROTECT YOUR PEACE OF MIND</p>
+                            
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-        <section class="grey-info-banner full-width">
-            <div class="content-wrapper">
-                <div class="info-container">
-                    <div class="info-item">
-                        <p>By pressing the Servest Secure button on your phone, you are activating a team of security professionals with one thing in mind...to keep you safe and protected! We are instantly aware of your situation and location which are key to solving your crisis effectively and quickly.</p>
-                    </div>
-                    <div class="info-item">
-                        <p>At Servest Secure, our sole purpose is to minimize the risk of injury or loss to our members. We do this by providing immediate management of any situation while dispatch of security, mechanical or medical teams are underway.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <div class="centered-content">
             <section class="about-us-section">
