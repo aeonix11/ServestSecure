@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servest Secure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .page-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .main-section, .blue-banner {
+            padding: 2rem;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 2rem;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: #003399;
+            margin: 0;
+        }
+        h2 {
+            color: #666;
+            font-weight: normal;
+            margin: 0.5rem 0 1rem;
+        }
+        .tagline {
+            color: #003399;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .description {
+            color: #333;
+        }
+        .image-container {
+            position: relative;
+            flex: 1;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .blue-square {
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            bottom: -20px;
+            right: -20px;
+            background-color: #003399;
+            z-index: 1;
+        }
+        .blue-banner {
+            background-color: #003399;
+            color: white;
+            padding: 2rem;
+        }
+        .banner-title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            position: relative;
+        }
+        .banner-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background-color: #cccccc;
+        }
+        .image-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .image-item {
+            width: 22%;
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        .image-title {
+            background-color: white;
+            color: #003399;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+        .grey-banner {
+            background-color: #808080;
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .grey-banner-content {
+            max-width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .services-section {
+            position: relative;
+            padding: 4rem 2rem;
+            background-image: url('path_to_background_image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #003399;
+        }
+        .services-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-image: url('path_to_logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            border-radius: 50%;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .service-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <main>
+            <section class="main-section">
+                <div class="main-content">
+                    <div class="text-content">
+                        <img src="path_to_your_logo.png" alt="Servest Secure Logo" class="logo">
+                        <h1>servest</h1>
+                        <h2>SECURE</h2>
+                        <p class="tagline">PROTECT YOUR PEACE OF MIND</p>
+                        <p class="description">A high availability emergency response service that delivers protection to you and your family while your crisis is resolved.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="path_to_your_image.jpg" alt="Smartphone with map" class="main-image">
+                        <div class="blue-square"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blue-banner">
+                <h2 class="banner-title">PERSONAL EMERGENCY RESPONSE</h2>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="path_to_footprint_image.jpg" alt="National Footprint">
+                        <div class="image-title">NATIONAL FOOTPRINT</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="path_to_control_center_image.jpg" alt="National Control & Command Centres">
+                        <div class="image-title">NATIONAL CONTROL & COMMAND CENTRES</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="path_to_armed_response_image.jpg" alt="24/7 Armed Response">
+                        <div class="image-title">24/7 ARMED RESPONSE</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="path_to_aerial_services_image.jpg" alt="Aerial Emergency Services">
+                        <div class="image-title">AERIAL EMERGENCY SERVICES</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grey-banner">
+                <div class="grey-banner-content">
+                    As a Servest Secure Subscriber, you and up to five of your loved ones enjoy the protection of professional personal security when you find yourself vulnerable or feel threatened under any of the following conditions:
+                </div>
+            </section>
+
+            <section class="services-section">
+                <div class="services-logo"></div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>You had an accident and are awaiting ambulance/SAPS and/or tow-in to arrive</h3>
+                    </div>
+                    <div class="service-item">
+                        <h3>Your vehicle has broken down and you need protection while Roadside assistance is being arranged</h3>
+                    </div>
+                    <div class="service-item">
+                        <h3>You are being followed by an unmarked or suspicious vehicle</h3>
+                    </div>
+                    <div class="service-item">
+                        <h3>Your vehicle has been hi-jacked</h3>
+                    </div>
+                    <div class="service-item">
+                        <h3>You are being threatened with arrest or have been arrested and require professional witnesses to ensure your safety during the ordeal</h3>
+                    </div>
+                    <div class="service-item">
+                        <h3>You require security assistance at home due to unlawful entry in progress</h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // We'll add JavaScript here if needed
+    </script>
+</body>
+</html>
