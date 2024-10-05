@@ -24,7 +24,7 @@
         .menu-logo {
             height: 60px; /* Increase size */
             padding: 5px; /* Add some padding */
-            background-color: white; /* Only if you can't remove the white background */
+            background-color: transparent; /* Remove white background */
             border-radius: 5px; /* Slightly round the corners */
         }
 
@@ -453,10 +453,9 @@
         }
 
         .site-footer {
-            background-color: #848884; /* The grey color used before */
+            background-color: #143c90;
             color: white;
             padding: 2rem 0;
-            margin-top: 2rem;
         }
 
         .footer-content {
@@ -464,19 +463,20 @@
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
         }
 
         .footer-links {
-            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
         }
 
         .footer-links a {
             color: white;
             text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
             transition: opacity 0.3s ease;
         }
 
@@ -485,23 +485,46 @@
         }
 
         .footer-contact {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 1rem;
+            flex: 1;
         }
 
-        .footer-contact p {
-            margin: 0.5rem 0;
+        .footer-contact-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: left;
+        }
+
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media (max-width: 1240px) {
+            .footer-content {
+                margin: 0 20px;
+            }
         }
 
         @media (max-width: 768px) {
-            .footer-links {
-                display: flex;
+            .footer-content {
                 flex-direction: column;
-                align-items: center;
-                gap: 1rem;
+                gap: 2rem;
             }
 
-            .footer-links a {
-                margin: 0;
+            .footer-links, .footer-contact {
+                width: 100%;
             }
         }
     </style>
@@ -509,7 +532,7 @@
 <body>
     <div class="menu-wrapper">
         <header class="top-menu">
-            <img src="images/first logo.png" alt="Servest Secure Logo" class="menu-logo">
+            <img src="images/servest-logo-white.svg" alt="Servest Secure Logo" class="menu-logo">
             <nav class="menu-items">
                 <a href="terms.html">Terms of Service</a>
                 <a href="privacy.html">Privacy Policy</a>
@@ -595,6 +618,8 @@
             </div>
         </section>
 
+        
+
         <div class="centered-content">
             <section class="app-usage-section">
                 <div class="content-wrapper">
@@ -618,7 +643,19 @@
             </section>
         </div>
 
-        
+        <section class="blue-banner full-width">
+            <div class="content-wrapper">
+                <h2 class="specialised-services-title">SPECIALISED INTERVENTION SERVICES</h2>
+                <hr class="specialised-services-separator">
+                <div class="specialised-services-content">
+                    <ul>
+                        <li>Should the Subscribing Member require a close personal protection team to escort him/her from one destination to another destination.</li>
+                        <li>This must be arranged 24 - 48 hours before the trip is to commence.</li>
+                        <li>This service is an additional service charged separately.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>        
 
         <div class="centered-content">
             <section class="about-us-section">
@@ -640,33 +677,38 @@
                 </div>
             </section>
         </div>
-
-        <section class="specialised-services-section full-width">
-            <div class="content-wrapper">
-                <h2 class="specialised-services-title">SPECIALISED INTERVENTION SERVICES</h2>
-                <hr class="specialised-services-separator">
-                <div class="specialised-services-content">
-                    <ul>
-                        <li>Should the Subscribing Member require a close personal protection team to escort him/her from one destination to another destination.</li>
-                        <li>This must be arranged 24 - 48 hours before the trip is to commence.</li>
-                        <li>This service is an additional service charged separately.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="contact.html">Contact Us</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="privacy.html">Privacy Policy</a>
-            </div>
-            <div class="footer-contact">
-                <p>Email: info@servestsecure.com</p>
-                <p>Phone: +27 (0) 11 123 4567</p>
-                <p>Address: 123 Security Street, Johannesburg, South Africa</p>
+    <footer class="site-footer full-width">
+        <div class="content-wrapper">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="documents/Servest Secure Terms and Condtions.docx">Terms of Service</a>
+                    <a href="documents/Servest-Privacy-Notice-2022.pdf">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-contact">
+                    
+                    <div class="contact-item">
+                        <img src="images/location.png" alt="Location" class="contact-icon">
+                        <div>
+                            <strong>HEADQUARTERS:</strong><br>
+                            Servest Building,<br>
+                            Corner of Bridal Veil Road and Tugela Lane,<br>
+                            Waterfall Logistics Precinct,<br>
+                            2090
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/phone-icon.png" alt="Phone" class="contact-icon">
+                        <div>0860 22 55 84</div>
+                    </div>
+                    <div class="contact-item">
+                        
+                        <img src="images/email.png" alt="Email" class="contact-icon">
+                        <div>info@servest.co.za</div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
