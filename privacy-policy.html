@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Servest Secure</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <style>
+        
+        .top-menu {
+            background-color: #143c90;
+            padding: 1.5rem 2rem; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        .menu-logo {
+            height: 60px; 
+            padding: 5px; 
+            background-color: transparent; 
+            border-radius: 5px; 
+        }
+
+        .menu-items {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .menu-items a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+            font-size: 1.1rem; 
+        }
+
+        .menu-items a:hover {
+            opacity: 0.8;
+        }
+
+        
+        .menu-wrapper {
+            background-color: #143c90;
+            width: 100%;
+        }
+
+        @media (max-width: 1240px) { 
+            .top-menu {
+                margin: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-menu {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 2rem; 
+            }
+
+            .menu-logo {
+                margin-bottom: 1rem;
+                height: 40px; 
+            }
+
+            .menu-items {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        /* Existing styles... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; 
+        }
+        .main-section, .blue-banner {
+            padding: 2rem;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 2rem;
+            min-width: 300px;
+        }
+        .logo {
+            width: 100%;
+            max-width: 350px; 
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: #143c90;
+            margin: 0;
+        }
+        h2 {
+            color: #848884; 
+            font-weight: normal;
+            margin: 0.5rem 0 1rem;
+        }
+        .tagline {
+            color: #143c90;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .description {
+            color: #848884; 
+        }
+        .image-container {
+            position: relative;
+            flex: 1;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .blue-square {
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            bottom: -20px;
+            right: -20px;
+            background-color: #143c90;
+            z-index: 1;
+        }
+        .blue-banner {
+            background-color: #143c90;
+            color: white;
+            padding: 2rem;
+        }
+        .banner-title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            position: relative;
+            color: white;
+        }
+        .banner-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background-color: #848884; 
+        }
+        .image-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .image-item {
+            width: 22%;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .image-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        .image-title {
+            background-color: white;
+            color: #143c90;
+            font-weight: bold;
+            font-size: 0.9rem;
+            height: 3em;
+            position: relative;
+            overflow: hidden;
+        }
+        .image-title span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+        }
+        .grey-banner {
+            background-color: #848884; 
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .grey-banner-content {
+            max-width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0; 
+        }
+        .services-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: -1px 0; 
+        }
+        .grey-info-banner {
+            background-color: #848884; 
+            color: white;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 1.1rem;
+        }
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .info-item {
+            flex: 1;
+            padding: 0 1rem;
+        }
+        .info-item p {
+            margin: 0;
+            line-height: 1.6;
+        }
+        .app-usage-section, .about-us-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-usage-title, .about-us-title {
+            color: #143c90;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .app-usage-separator, .about-us-separator {
+            height: 6px;
+            background-color: #848884; 
+            border: none;
+            margin: 0;
+        }
+        .app-usage-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+        .phone-container {
+            flex: 2;
+            margin-right: 2rem;
+        }
+        .phone-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .content-container {
+            flex: 1;
+            min-width: 300px;
+        }
+        .content-title {
+            color: #143c90;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .content-text {
+            margin-bottom: 1rem;
+            font-size: 1rem; 
+        }
+        .content-logo {
+            width: 100%; 
+            max-width: 100%; 
+            height: auto; 
+            margin-top: 2rem;
+        }
+        .content-tagline {
+            color: #143c90;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 1rem; 
+        }
+
+        
+        @media (min-width: 1024px) {
+            .content-title {
+                font-size: 2rem;
+            }
+            .content-text {
+                font-size: 1.2rem;
+            }
+            .content-tagline {
+                font-size: 1.2rem;
+            }
+            .content-logo {
+                max-width: 400px; 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .app-usage-content {
+                flex-direction: column;
+            }
+            .phone-container {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+            .phone-container, .content-container {
+                width: 100%;
+            }
+            .image-item {
+                width: 48%; 
+            }
+            .image-title {
+                font-size: 0.8rem; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-item {
+                width: 100%; 
+            }
+        }
+
+        .about-us-image {
+            margin-top: 2rem;
+            width: 100%; 
+        }
+
+        .servest-image {
+            width: 100%; 
+            height: auto; 
+            max-width: none; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .specialised-services-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #143c90;
+            color: white;
+        }
+
+        .specialised-services-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .specialised-services-separator {
+            height: 6px;
+            background-color: #848884; 
+            border: none;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .specialised-services-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .specialised-services-content li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .specialised-services-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: white;
+        }
+
+        
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .full-width {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .blue-banner, .grey-banner, .grey-info-banner, .specialised-services-section {
+            width: 100%;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .centered-content {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        
+        @media (max-width: 1200px) {
+            .logo {
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .text-content {
+                padding-right: 0;
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                max-width: 300px;
+            }
+        }
+
+        .site-footer {
+            background-color: #143c90;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        .footer-contact-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: left;
+        }
+
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media (max-width: 1240px) {
+            .footer-content {
+                margin: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-links, .footer-contact {
+                width: 100%;
+            }
+        }
+        .privacy-policy-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <header class="top-menu">
+            <img src="images/servest-logo-white.svg" alt="Servest Secure Logo" class="menu-logo">
+            <nav class="menu-items">
+                <a href="index.html">Home</a>
+                <a href="terms-and-conditions.html">Terms and Conditions</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="centered-content">
+            <section class="privacy-policy-content">
+                <h1>Privacy Policy</h1>
+                    <p>SERVEST GROUP PRIVACY NOTICE
+                    2022</p>
+                <p>The Servest Group ("Servest") whose registered office is located at the Servest
+Building, Waterfall Logistics Precinct, Corner of Bridal Veil Road and the R101 is
+committed to protecting the privacy of the personal information which it
+collects in the course of business. Servest will only collect, use or disclose your
+personal information where it is fair and lawful to do so.</p>
+
+                <h2>C o l l e c t i o n</h2>
+                <p>In this Privacy Notice, your "personal information" means personal information as
+defined in the Protection of Personal Information Act, 2013 of South Africa.We
+collect personal information directly from you, and where lawful and
+reasonable, we may collect personal information about you from third parties
+and publicly available sources.</p>
+                <p>The information collected shall be used inter alia to perform our obligations in
+terms of an agreement (not limited to, employment contracts, supplier
+agreement, services agreements).</p>
+                <p>In order to engage and / or interact with you, for the purposes described above,
+we will have to process certain types of your personal information, as described
+below:</p>
+                <ul>
+                    <li>Such as names, alias, addresses, identity numbers, passport numbers,
+phone numbers, cell phone numbers, vehicle make and registration
+numbers, social media user IDs, email addresses, and similar contact data,
+serial numbers of equipment, details regards the possession of dangerous
+weapons, and other contact information including details of your employer,
+memberships or affiliations, such as the name of your employer or
+organisation that you are a member of, information about your colleagues
+or those within your organisation, your status with an organisation, and
+similar data, which are required for various legitimate interest, contractual
+and / or lawful reasons.</li>
+                    <li>Specific identifiers, which are required in order to protect legitimate
+interests, comply with legal obligations or public legal duties, or in order to
+accommodate you in our workplaces, such as your race (B-BBEE related),
+sexual and medical history including any medical conditions (to comply with
+laws and related to correct and fair treatment issues), trade union matters ( to
+comply with laws and related to correct and fair treatment issues), and
+financial, credit, deviant and criminal history ( to protect our legitimate
+interests and to perform risk assessments), as well as children's details
+(benefits related).</li>
+                    <li>Account Information, including banking details, security-related information
+(including user names passwords, authentication methods, and roles),
+service-related information (including purchase history and account
+profiles), billing-related information (including payment, shipping, and billing
+information), and similar data, all which are required to perform contractual
+matters and / or in order to provide you access to services.</li>
+                    <li>User Content, such as content of communications, suggestions, questions,
+comments, feedback, and other information you send to us, that you
+provide to us when you contact us, or that you post on our websites,
+applications, mobile applications, or social media portals or platforms
+including information in alerts, folders, notes, and shares of content), and
+similar data which are required to perform contractual matters and / or in
+order to provide you access to services or attend to queries.</li>
+                    <li>Demographic Information, such as country, preferred language, age and
+date of birth, marriage status, gender, physical characteristics, personal or
+household/familial financial status and metrics, and similar data, which are
+required to perform contractual matters and or in order to provide you
+access to services or attend to queries or to ensure that security safeguards
+are in place.</li>
+                    <li>Your image, such as still pictures, video, voice, and other similar data, which
+are required to perform contractual matters and / or in order to provide you
+access into our premises and to services or attend to queries or to ensure
+that security safeguards are in place.</li>
+                    <li>Identity Information, such as government-issued identification information,
+tax identifiers, indemnity numbers, other government-issued identifiers, and
+similar data, which are required to comply with laws and public duties.</li>
+                    <li>Financial Information, such as billing address, credit card information, billing
+contact details, and similar data, tax numbers and VAT numbers, which are
+required to perform contractual matters and or in order to provide you
+access to services or attend to queries or to ensure that security safeguards
+are in place and / or which are required to comply with laws and pubic
+duties.</li>
+                    <li>Career, education and employment elated information, such as job
+preferences or interests, work performance and history, salary history,
+nationality and immigration status, demographic data, disability-related
+information, application information, professional license information and
+related compliance activities, accreditations and other accolades, education
+history (including schools attended, academic degrees or areas of study,
+academic performance, and rankings), and similar data, which are required
+for contractual or employment related matters or which are required to
+comply with laws.</li>
+                    <li>Health records such as medical status and history, examinations, blood
+type, medial aid history, disability-related information, biometrics, medicals,
+psychometrics and similar data, which are required for contractual or
+employment related matters or which are required to comply with laws.</li>
+                    <li>Details of your location when the Servest Secure App is in use as location
+data is essential for accurately dispatching emergency help</li>
+                    <li>Social Media and online content, such as information placed or posted in
+social media and online profiles, online posts, and similar data, which are
+required to perform contractual matters and or in order to provide you
+access to services or attend to queries and generally for the purposes of
+advertising, marketing and related communications.</li>
+                </ul>
+
+                <p>We use your personal information for a purpose consistent with the purpose
+for which it was collected and in a manner that is adequate, relevant and not
+excessive in the way which it is processed. Personal information will only be processed for a purpose compatible with that for which it was collected, unless you have agreed to an alternative purpose or Servest is permitted in terms of national legislation of general application dealing primarily with the protection of personal information.
+
+                <p>Your personal information will be processed by us for the following purposes:</p>
+                <ul>
+                    <li>Contract purposes - assessment and conclusion of a contract. To investigate
+whether we are able or willing to conclude a contract with you based on the
+findings of any due diligence detailed above, and if the assessment is in
+order, to conclude a contract with you.</li>
+                    <li>To process transactions and render or provide or receive goods and services
+and the conclusion of contracts: To perform under any contract which has
+been concluded with you, including carrying out all contractual obligations,
+exercising all contractual rights, assessing or communicating requirements,
+manufacturing, packaging, ordering, delivering, and or responding to, or
+submitting queries, complaints, returns or engaging in general feedback, or
+acting in such a manner as to personalize any goods or services, and to
+make recommendations related to us or our or your operations.</li>
+                    <li>Attending to financial matters pertaining to any transaction- conclusion of a
+contract: To administer accounts or profiles related to you or your
+organisation including registrations, subscriptions, purchases, billing events,
+fees, costs and charges calculations, quoting, invoicing, receipt of payments
+or payment of refunds, reconciliations and financial management in general.</li>
+                    <li>Due diligence purposes - legitimate purpose: To carry out a due diligence
+before we decide to engage or interact with you or to do business with you,
+including obtaining and verifying your credentials, including your business
+details, medical status, health history and related records, education and
+employment history and qualifications, credit and financial status and
+history, tax status, B-BBEE status, and or any performance or vendor related
+history.</li>
+                    <li>Communications- legitimate purpose: To make contact with you and to
+communicate with you generally or in respect of our or your requirements,
+or instructions.</li>
+                    <li>Risk assessment and anti- bribery and corruption matters-legitimate
+purpose: To carry out vendor, organisational and enterprise wide risk
+assessments, in order to detect and prevent bribery, corruption, fraud and
+abuse, to comply with all applicable laws, as well as to identify and
+authenticate your access to and to provide you with access to our goods,
+services or premises and generally to ensure the security and protection of
+all persons including employees, and persons when entering or leaving our
+sites and operations or facilities and / or to exercise our rights and to
+protect our and others' rights and / or property, including to take action
+against those that seek to violate or abuse our systems, services, customers
+or employees and / or other third parties where applicable.</li>
+                    <li>To perform a conflict of interest assessment.</li>
+                    <li>For the purposes of employment with Servest. Fulfilling our obligations in
+terms of an employment contract.</li>
+                    <li>Legal obligation and public duties: To comply with the law and our legal
+obligations, including to register with Regulators, obtain and hold permits
+and certificates, register for VAT, Tax, PAYE, SDL, COIDA and UIF etc. and to
+submit reports or provide various notices or returns, to litigate and / or to
+respond to a request or order from a SAP official, investigator or court
+official, regulator, or public authority.</li>
+                    <li>Security purposes: legitimate purpose and to comply with laws: to permit
+you access to our offices, facilities, manufacturing or parking areas, as well
+as to controlled areas, for the purposes of monitoring via CCTV, your
+interaction and access in and from our facilities described above, and for
+general risk management, security and emergency incident control
+purposes as well as for data and cyber security purposes.</li>
+                    <li>Internal research and development purposes - consent required: To conduct
+internal research and development for new content, products, and services,
+and to improve, test, and enhance the features and functions of our current
+goods and services.</li>
+                    <li>Sale, merger, acquisition, or other disposition of our business (including in
+connection with any bankruptcy or similar proceedings) – our Legitimate
+interest- To proceed with any proposed or actual sale, merger, acquisition, or
+other disposition of our business (including in connection with any bankruptcy or
+similar proceedings).</li>
+                    <li>Marketing and electronic communications. We may provide you with communications regarding our goods and services and or other notifications, programs, events, or updates that you may have registered or asked for, and to send you offers, advertising, and marketing materials, including providing personalised advertising to you, save where you have opted out of this activity.</li>
+                    <li>IP addresses and cookies through the use of our website</li>
+                </ul>
+
+                <h2>Disclosure</h2>
+                <p>Servest will only disclose your personal information if:</p>
+                <ul>
+                    <li>The law requires it; or</li>
+                    <li>You agree that we may disclose your information.</li>
+                    <li>In accordance with the Protection of Personal Information Act.</li>
+                </ul>
+
+                <h2>Third Parties</h2>
+                <p>As a global business, we may share your personal information within the group and trusted third parties based in and outside the country in which you live so that they may process that data on our behalf. We may also share your personal information with companies, organisations or individuals outside of Servest if we believe that disclosure of the information is necessary for legal or contractual reasons.</p>
+
+                <h2>Links to Other Websites</h2>
+                <p>Servest has no control over and accepts no responsibility for the privacy practices of any third-party websites to which hyperlinks may have been provided and Servest strongly recommends that you review the privacy notice of any website you visit before using it further.</p>
+
+                <h2>Cross Border Transfer</h2>
+                <p>We may transfer your personal information to servers located outside the country in which you live or other trusted third parties based in other countries so that they may process personal information on our behalf. By providing Servest with personal information, you agree to us doing so in accordance with the terms of this Privacy notice and applicable data protection laws and regulations. You should be aware that many countries do not afford the same legal protection to personal information as you might enjoy in your country of origin. While your personal information is in another country, it may be accessed by the courts, law enforcement and national security authorities in that country in accordance with its laws.</p>
+
+                <h2>Storage and Security</h2>
+                <p>We store personal information as required by law. Our security systems are designed to prevent loss, unauthorised destruction, damage and/or access to your personal information from unauthorised third parties.</p>
+                <p>The security of your personal information is important to us. Taking into account the nature, scope, context, and purposes of processing personal information, as well as the risks to individuals of varying likelihood and severity, we have implemented technical and organizational measures designed to protect the security of personal information. In this regard we will conduct regular audits regarding the safety and the security of your personal Information.</p>
+                <p>Your personal information will be stored electronically which information, for operational reasons, will be accessible to persons employed or contracted by us on a need to know basis, save that where appropriate, some of your personal information may be retained in hard copy.</p>
+                <p>Once your personal information is no longer required due to the fact that the purpose for which the personal information was held has come to an end, such personal information will be retained in accordance with our applicable records retention policies, which varies depending on the type of processing, the purpose for such processing and the business function. We calculate retention periods based upon and reserve the right to retain personal Information for the periods that the personal Information is needed to: (a) fulfil the purposes described in this Privacy notice, (b) meet the timelines determined or recommended by regulators, professional bodies, or associations, (c) comply with applicable laws, legal holds, and other legal obligations (including contractual obligations), and (d) comply with your requests.</p>
+
+                <h2>Changes to this Privacy Statement</h2>
+                <p>We reserve the right to amend our Privacy notice at any time, for any reason, and without notice to you other than the posting of the updated Privacy Notice on our website and in this regard encourage you to visit our website frequently in order to keep abreast with any changes.</p>
+
+                <h2>Your data protection rights:</h2>
+                <ul>
+                    <li>You are entitled to access your personal data by sending a written request to popi@servest.co.za. We may charge you a fee for this service.</li>
+                    <li>You may also request us to correct or supplement any of your personal data which we will undertake as soon as practicable.</li>
+                    <li>Request the destruction of your personal data. We will consider your request in light of any other laws or regulations prohibiting us from destroying your personal data.</li>
+                </ul>
+                <p>Please contact us at popi@servest.co.za if you wish to make a request.</p>
+
+                <h2>Contact us</h2>
+                <p>Any comments, questions or suggestions about this privacy statement or our handling of your personal information should be emailed to popi@servest.co.za.</p>
+                <p>Alternatively, you can contact us at the following postal address or telephone number:</p>
+                <p>Information Officer: Stuart Kader<br>
+                Deputy Information Officer: Pearline Ramjathan</p>
+                <p>Postal: P O Box 3082<br>
+                Saxonwold<br>
+                2123</p>
+                <p>Phone: 0860 22 55 84 - Our telephone switchboard is open 8:00 am – 5:00 pm GMT, Monday to Friday. Our switchboard team will take a message and ensure the appropriate person responds as soon as possible.</p>
+
+                <h2>Complaints</h2>
+                <p>Should you wish to discuss a complaint, please feel free to contact us using the details provided above.</p>
+                <p>All complaints will be treated in a confidential manner.</p>
+                <p>You can also complain to the Information Regulator if you are unhappy with how we have used your personal information. Their contact details are as follows:</p>
+                <p ><strong>The Information regulator (South Africa)</strong></p>
+                <P>33 Hoofd Street</P>
+                <p>Forum III, 3rd Floor Braampark</p>
+                <p>P.O Box 31533</p>
+                <p>Braamfontein, Johannesburg, 2017</p>
+                <p>Complaints email: complaints.IR@justice.gov.za</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer full-width">
+        <div class="content-wrapper">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="terms-and-conditions.html">Terms and Conditions</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <img src="images/location.png" alt="Location" class="contact-icon">
+                        <div>
+                            <strong>HEADQUARTERS:</strong><br>
+                            Servest Building,<br>
+                            Corner of Bridal Veil Road and Tugela Lane,<br>
+                            Waterfall Logistics Precinct,<br>
+                            2090
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/phone-icon.png" alt="Phone" class="contact-icon">
+                        <div>0860 22 55 84</div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/email.png" alt="Email" class="contact-icon">
+                        <div>info@servest.co.za</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add any necessary JavaScript here
+    </script>
+</body>
+</html>
